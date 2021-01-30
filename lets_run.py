@@ -48,31 +48,31 @@ st.markdown('---')
 
 
 def new_member():
-    name_input = st.sidebar.text_input('Verrat uns deinen Namen')
-    st.sidebar.markdown('Was ist deine aktuelle pace für einen entspannten Lauf?')
-    placeholder_side_1 = st.sidebar.empty()
-    easy_mins = st.sidebar.number_input('Minuten', min_value=3, max_value=7, value=5, step=1, key ='easy_mins')
-    easy_seconds = st.sidebar.number_input('Sekunden', min_value=0, max_value=50, value=20, step=10, key ='easy_seconds')
+    name_input = st.text_input('Verrat uns deinen Namen')
+    st.markdown('Was ist deine aktuelle pace für einen entspannten Lauf?')
+    placeholder_side_1 = st.empty()
+    easy_mins = st.number_input('Minuten', min_value=3, max_value=7, value=5, step=1, key ='easy_mins')
+    easy_seconds = st.number_input('Sekunden', min_value=0, max_value=50, value=20, step=10, key ='easy_seconds')
     if easy_seconds == 0:
         text_easy = 'Easy pace: {}:0{}'.format(easy_mins,easy_seconds)
     else:
         text_easy = 'Easy pace: {}:{}'.format(easy_mins,easy_seconds)
     placeholder_side_1.markdown(text_easy)
 
-    st.sidebar.markdown('Was ist deine aktuelle pace für einen harten Lauf?')
-    st.sidebar.markdown('*Du solltest die Pace mindestens 2km halten können*')
-    placeholder_side_2= st.sidebar.empty()
-    hard_mins = st.sidebar.number_input('Minuten', min_value=3, max_value=6, value=4, step=1, key ='hard_mins')
-    hard_seconds = st.sidebar.number_input('Sekunden', min_value=0, max_value=50, value=20, step=10, key ='hard_seconds')
+    st.markdown('Was ist deine aktuelle pace für einen harten Lauf?')
+    st.markdown('*Du solltest die Pace mindestens 2km halten können*')
+    placeholder_side_2= st.empty()
+    hard_mins = st.number_input('Minuten', min_value=3, max_value=6, value=4, step=1, key ='hard_mins')
+    hard_seconds = st.number_input('Sekunden', min_value=0, max_value=50, value=20, step=10, key ='hard_seconds')
     if hard_seconds == 0:
         text_hard = 'Hard pace: {}:0{}'.format(hard_mins,hard_seconds)
     else:
         text_hard = 'Hard pace: {}:{}'.format(hard_mins,hard_seconds)
     placeholder_side_2.markdown(text_hard)
 
-    st.sidebar.markdown('Ein Longrun für mich bedeuted mindestens ...km?')
-    placeholder_side_3= st.sidebar.empty()
-    long_km = st.sidebar.number_input('km', min_value=8, max_value=20, value=12, step=1, key ='long_km')
+    st.markdown('Ein Longrun für mich bedeuted mindestens ...km?')
+    placeholder_side_3= st.empty()
+    long_km = st.number_input('km', min_value=8, max_value=20, value=12, step=1, key ='long_km')
     text_long = 'Longrun: mindestens {}km'.format(long_km)
     placeholder_side_3.markdown(text_long)
     return easy_mins, easy_seconds, hard_mins, hard_seconds, long_km, name_input
@@ -174,8 +174,6 @@ if start_check:
     workout1_steps.markdown(workout_text_part2)
     workout1_steps.markdown(workout_text_part3)
     workout1_steps.markdown(cool_down_text)
-    st.markdown('---')
-
 
     workout2_title, workout2_steps = st.beta_columns(2)
     workout2_title.markdown(
@@ -188,7 +186,6 @@ if start_check:
     workout2_steps.markdown(workout_text_part3)
     workout2_steps.markdown(workout_text_part4)
     workout2_steps.markdown(cool_down)
-    st.markdown('---')
 
     workout3_title, workout3_steps = st.beta_columns(2)
     workout3_title.markdown(

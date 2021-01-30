@@ -39,42 +39,23 @@ col1.subheader('Klingt gut?')
 st.markdown(':rocket: Auf gehts! :rocket:')
 start_check = st.checkbox('Konfigurator starten')
 st.markdown('---')
-placeholder_0 = st.empty()
-placeholder_1 = st.empty()
-placeholder_2 = st.empty()
-placeholder_3 = st.empty()
-placeholder_4 = st.empty()
-st.markdown('---')
+
 
 
 def new_member():
     name_input = st.text_input('Verrat uns deinen Namen')
     st.markdown('Was ist deine aktuelle pace für einen entspannten Lauf?')
-    placeholder_side_1 = st.empty()
+
     easy_mins = st.number_input('Minuten', min_value=3, max_value=7, value=5, step=1, key ='easy_mins')
     easy_seconds = st.number_input('Sekunden', min_value=0, max_value=50, value=20, step=10, key ='easy_seconds')
-    if easy_seconds == 0:
-        text_easy = 'Easy pace: {}:0{}'.format(easy_mins,easy_seconds)
-    else:
-        text_easy = 'Easy pace: {}:{}'.format(easy_mins,easy_seconds)
-    placeholder_side_1.markdown(text_easy)
 
     st.markdown('Was ist deine aktuelle pace für einen harten Lauf?')
     st.markdown('*Du solltest die Pace mindestens 2km halten können*')
-    placeholder_side_2= st.empty()
     hard_mins = st.number_input('Minuten', min_value=3, max_value=6, value=4, step=1, key ='hard_mins')
     hard_seconds = st.number_input('Sekunden', min_value=0, max_value=50, value=20, step=10, key ='hard_seconds')
-    if hard_seconds == 0:
-        text_hard = 'Hard pace: {}:0{}'.format(hard_mins,hard_seconds)
-    else:
-        text_hard = 'Hard pace: {}:{}'.format(hard_mins,hard_seconds)
-    placeholder_side_2.markdown(text_hard)
 
     st.markdown('Ein Longrun für mich bedeuted mindestens ...km?')
-    placeholder_side_3= st.empty()
     long_km = st.number_input('km', min_value=8, max_value=20, value=12, step=1, key ='long_km')
-    text_long = 'Longrun: mindestens {}km'.format(long_km)
-    placeholder_side_3.markdown(text_long)
     return easy_mins, easy_seconds, hard_mins, hard_seconds, long_km, name_input
 
 
@@ -159,7 +140,13 @@ def workout_2_mix(easy_mins, easy_seconds, hard_mins, hard_seconds, long_km):
 
 if start_check:
     easy_mins, easy_seconds, hard_mins, hard_seconds, long_km, name_input = new_member()
-
+    st.markdown('---')
+    placeholder_0 = st.empty()
+    placeholder_1 = st.empty()
+    placeholder_2 = st.empty()
+    placeholder_3 = st.empty()
+    placeholder_4 = st.empty()
+    st.markdown('---')
 
     make_text_layout(name_input, easy_mins, easy_seconds, hard_mins, hard_seconds, long_km)
 

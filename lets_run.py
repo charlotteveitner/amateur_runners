@@ -12,18 +12,18 @@ from math import floor
 # global settings
 CWD = os.path.abspath('.')
 image = Image.open('amateur_logo.jpg')
-current_workouts = pd.read_parquet('participants.parquet')
-
-current_workouts = pd.DataFrame(columns=[
-                                            'name',
-                                            'easy_mins',
-                                            'easy_seconds',
-                                            'hard_mins',
-                                            'hard_seconds',
-                                            'long_km'
-                                            ])
-
-current_workouts.to_parquet('participants.parquet')
+# current_workouts = pd.read_parquet('amateur_runners/participants.parquet')
+#
+# current_workouts = pd.DataFrame(columns=[
+#                                             'name',
+#                                             'easy_mins',
+#                                             'easy_seconds',
+#                                             'hard_mins',
+#                                             'hard_seconds',
+#                                             'long_km'
+#                                             ])
+#
+# current_workouts.to_parquet('participants.parquet')
 
 # Streamlit Layout
 st.set_page_config(layout="wide")

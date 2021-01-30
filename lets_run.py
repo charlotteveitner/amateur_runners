@@ -152,8 +152,7 @@ if start_check:
 
     workout1_title, workout1_steps = st.beta_columns(2)
     workout1_title.markdown(
-                                "**Workout 1**  \n"
-                                "Fahrtenspiel  \n"
+                                "**Workout 1** Fahrtenspiel"
                             )
     warm_up_text, workout_text_part1, workout_text_part2, workout_text_part3, cool_down_text = workout_1_mix(easy_mins, easy_seconds, hard_mins, hard_seconds)
     workout1_steps.markdown(warm_up_text)
@@ -164,8 +163,7 @@ if start_check:
 
     workout2_title, workout2_steps = st.beta_columns(2)
     workout2_title.markdown(
-                                "**Workout 2**  \n"
-                                "Steigerungslauf  \n"
+                                "**Workout 2** Steigerungslauf"
                             )
     workout_text_part1, workout_text_part2, workout_text_part3, workout_text_part4, cool_down = workout_2_mix(easy_mins, easy_seconds, hard_mins, hard_seconds, long_km)
     workout2_steps.markdown(workout_text_part1)
@@ -176,8 +174,7 @@ if start_check:
 
     workout3_title, workout3_steps = st.beta_columns(2)
     workout3_title.markdown(
-                                "**Workout 3**  \n"
-                                "Longrun  \n"
+                                "**Workout 3** Longrun"
                             )
     workout3_steps.markdown('Nothing Fancy here')
     workout3_steps.markdown('Einfach {}km in {}:{}'.format(long_km+1, easy_mins, easy_seconds))

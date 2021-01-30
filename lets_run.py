@@ -64,7 +64,7 @@ def make_text_layout(name_input, easy_mins, easy_seconds, hard_mins, hard_second
     if name_input != '':
         placeholder_0.markdown('Amateur Runner: **{}**'.format(name_input))
     else:
-        placeholder_0.markdown('*Vergiss nicht deinen Namen einzugeben*')
+        placeholder_0.markdown('***Vergiss nicht deinen Namen einzugeben***')
 
 
     if easy_seconds == 0:

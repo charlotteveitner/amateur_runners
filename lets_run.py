@@ -88,7 +88,7 @@ def workout_1_mix(easy_mins, easy_seconds, hard_mins, hard_seconds):
     warm_up = easy_mins * 60 + easy_seconds + 10
     warm_up_mins = floor(warm_up / 60)
     warm_up_seconds = warm_up - (warm_up_mins *60)
-    warm_up_text = '**1)** 10 Minuten Warm-Up mit ~{}:{}'.format(warm_up_mins, warm_up_seconds)
+    warm_up_text = '**1)** 10 Minuten Warm-Up mit ~{}:{}'.format(warm_up_mins, '{num:02d}'.format(num=warm_up_seconds))
 
     workout_hard = hard_mins * 60 + hard_seconds - 20
     workout_hard_mins = floor(workout_hard / 60)
@@ -99,10 +99,10 @@ def workout_1_mix(easy_mins, easy_seconds, hard_mins, hard_seconds):
     workout_easy_seconds = workout_easy - (workout_easy_mins *60)
 
     workout_text_part1 = '**2)** *insgesamt 5 Wiederholungen*'
-    workout_text_part2 = '--> 2 Minuten ballern mit ~{}:{}'.format(workout_hard_mins, workout_hard_seconds)
+    workout_text_part2 = '--> 2 Minuten ballern mit ~{}:{}'.format(workout_hard_mins, '{num:02d}'.format(num=workout_hard_seconds))
     workout_text_part3 = '--> 3 Minuten chillen mit ~{}:{}'.format(workout_easy_mins, workout_easy_seconds)
 
-    cool_down_text = '**3)** 10 Minuten Cool-down mit ~{}:{}'.format(warm_up_mins, warm_up_seconds)
+    cool_down_text = '**3)** 10 Minuten Cool-down mit ~{}:{}'.format(warm_up_mins, '{num:02d}'.format(num=warm_up_seconds))
     return warm_up_text, workout_text_part1, workout_text_part2, workout_text_part3, cool_down_text
 
 

@@ -201,6 +201,6 @@ if start_check:
         # current_workouts = current_workouts.drop_duplicates(subset=['name'], keep='last')
         # st.write(current_workouts)
         # current_workouts.to_parquet('participants.parquet')
-        anmelde_feedback.markdown('Du bist jetzt für die Challenge angemeldet')
+        anmelde_feedback.markdown(':rocket: **{}** du bist jetzt für die Challenge angemeldet :rocket:'.format(name_input))
         # anmelde_nummer.markdown('Amateure die mitmachen: *{}*'.format(len(current_workouts['name'])))
         st.balloons()

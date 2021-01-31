@@ -13,18 +13,17 @@ from math import floor
 CWD = os.path.abspath('.')
 # current_workouts = pd.read_parquet('participants.parquet')
 image = Image.open('amateur_logo.jpg')
-list_of_all_names = []
 # current_workouts.to_parquet('participants.parquet')
 # current_workouts = pd.read_parquet('amateur_runners/participants.parquet')
 #
-current_workouts = pd.DataFrame(columns=[
-                                            'name',
-                                            'easy_mins',
-                                            'easy_seconds',
-                                            'hard_mins',
-                                            'hard_seconds',
-                                            'long_km'
-                                            ])
+# current_workouts = pd.DataFrame(columns=[
+#                                             'name',
+#                                             'easy_mins',
+#                                             'easy_seconds',
+#                                             'hard_mins',
+#                                             'hard_seconds',
+#                                             'long_km'
+#                                             ])
 #
 # current_workouts.to_parquet('participants.parquet')
 
@@ -190,19 +189,18 @@ if start_check:
 
     if button_anmeldung:
         # current_workouts = pd.read_parquet('participants.parquet')
-        current_member = pd.DataFrame({
-                                        'name': [name_input],
-                                        'easy_mins': [easy_mins],
-                                        'easy_seconds': [easy_seconds],
-                                        'hard_mins': [hard_mins],
-                                        'hard_seconds': [hard_seconds],
-                                        'long_km': [long_km]
-                                        })
-        current_workouts = current_workouts.append(current_member)
-        current_workouts = current_workouts.drop_duplicates(subset=['name'], keep='last')
+        # current_member = pd.DataFrame({
+        #                                 'name': [name_input],
+        #                                 'easy_mins': [easy_mins],
+        #                                 'easy_seconds': [easy_seconds],
+        #                                 'hard_mins': [hard_mins],
+        #                                 'hard_seconds': [hard_seconds],
+        #                                 'long_km': [long_km]
+        #                                 })
+        # current_workouts = current_workouts.append(current_member)
+        # current_workouts = current_workouts.drop_duplicates(subset=['name'], keep='last')
         # st.write(current_workouts)
         # current_workouts.to_parquet('participants.parquet')
         anmelde_feedback.markdown(':rocket: **{}** du bist jetzt für die Challenge angemeldet :rocket:'.format(name_input))
-
-        anmelde_nummer.markdown('Amateure die mitmachen: *{}*'.format(len(current_workouts['name'])))
+        # anmelde_nummer.markdown('Amateure die mitmachen: *{}*'.format(len(current_workouts['name'])))
         st.balloons()

@@ -14,6 +14,7 @@ CWD = os.path.abspath('.')
 st.write(CWD)
 current_workouts = pd.read_parquet('participants.parquet')
 image = Image.open('amateur_logo.jpg')
+current_workouts.to_parquet('participants.parquet')
 # current_workouts = pd.read_parquet('amateur_runners/participants.parquet')
 #
 # current_workouts = pd.DataFrame(columns=[

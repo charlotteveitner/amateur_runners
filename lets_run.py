@@ -11,6 +11,8 @@ from math import floor
 
 # global settings
 CWD = os.path.abspath('.')
+st.write(CWD)
+current_workouts = pd.read_parquet('participants.parquet')
 image = Image.open('amateur_logo.jpg')
 # current_workouts = pd.read_parquet('amateur_runners/participants.parquet')
 #

@@ -12,9 +12,9 @@ from math import floor
 # global settings
 CWD = os.path.abspath('.')
 st.write(CWD)
-current_workouts = pd.read_parquet('participants.parquet')
+# current_workouts = pd.read_parquet('participants.parquet')
 image = Image.open('amateur_logo.jpg')
-current_workouts.to_parquet('participants.parquet')
+# current_workouts.to_parquet('participants.parquet')
 # current_workouts = pd.read_parquet('amateur_runners/participants.parquet')
 #
 # current_workouts = pd.DataFrame(columns=[
@@ -189,19 +189,19 @@ if start_check:
     st.subheader('Teile deine Fortschritte auf instagram und verlinke @weareamateurs')
 
     if button_anmeldung:
-        current_workouts = pd.read_parquet('participants.parquet')
-        current_member = pd.DataFrame({
-                                        'name': [name_input],
-                                        'easy_mins': [easy_mins],
-                                        'easy_seconds': [easy_seconds],
-                                        'hard_mins': [hard_mins],
-                                        'hard_seconds': [hard_seconds],
-                                        'long_km': [long_km]
-                                        })
-        current_workouts = current_workouts.append(current_member)
-        current_workouts = current_workouts.drop_duplicates(subset=['name'], keep='last')
-        st.write(current_workouts)
-        current_workouts.to_parquet('participants.parquet')
+        # current_workouts = pd.read_parquet('participants.parquet')
+        # current_member = pd.DataFrame({
+        #                                 'name': [name_input],
+        #                                 'easy_mins': [easy_mins],
+        #                                 'easy_seconds': [easy_seconds],
+        #                                 'hard_mins': [hard_mins],
+        #                                 'hard_seconds': [hard_seconds],
+        #                                 'long_km': [long_km]
+        #                                 })
+        # current_workouts = current_workouts.append(current_member)
+        # current_workouts = current_workouts.drop_duplicates(subset=['name'], keep='last')
+        # st.write(current_workouts)
+        # current_workouts.to_parquet('participants.parquet')
         anmelde_feedback.markdown('Du bist jetzt für die Challenge angemeldet')
-        anmelde_nummer.markdown('Amateure die mitmachen: *{}*'.format(len(current_workouts['name'])))
+        # anmelde_nummer.markdown('Amateure die mitmachen: *{}*'.format(len(current_workouts['name'])))
         st.balloons()
